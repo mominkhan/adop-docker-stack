@@ -1,7 +1,9 @@
+## ADOP - Docker Stack within Swarm
+![Swarm](https://raw.githubusercontent.com/mominkhan/adop-docker-stack/master/img/swarm.png)
 
 ## Pre-Requisites
 
-To run ADOP in Docker Stack mode you would need:
+To run ADOP as a docker stack within swarm cluster you would need:
 * General
     - Outbound internet connectivity
 * Docker - version 17 or higher
