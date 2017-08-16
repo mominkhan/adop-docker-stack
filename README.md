@@ -4,14 +4,12 @@
 ## Pre-Requisites
 
 To run ADOP as a docker stack within swarm cluster you would need:
-* General
-    - Outbound internet connectivity
 * Docker - version 17 or higher
 * Docker swarm - manager and worker nodes with labels associated with them to reflect the desired placement constraints for the tools in the platform.
 
 ## Instructions
 
-These instructions will spin up the DevOps platform as a docker stack in a given N-machine based docker swarm. The tools get deployed across multiple nodes based on the labels associated with the nodes.  
+These instructions will spin up the DevOps platform as a docker stack in a given n-machine based docker swarm. The tools get deployed across multiple nodes based on the labels associated with the nodes.  
 
 1. Clone this repository on the manager node in the given docker swarm and then in the terminal window:
     - Run (using default values):
