@@ -29,8 +29,6 @@ These instructions will spin up the DevOps platform as a docker stack in a given
     ##########################################################
     ```
 1. Log in using the username and password you specified earlier:
-    ```
-<INITIAL_ADMIN_USER> / <INITIAL_ADMIN_PASSWORD>
-    ```
+    ```<INITIAL_ADMIN_USER> / <INITIAL_ADMIN_PASSWORD>```
 
 
