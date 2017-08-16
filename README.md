@@ -12,7 +12,13 @@ To run ADOP as a docker stack within swarm cluster you would need:
 These instructions will spin up the DevOps platform as a docker stack in a given n-machine based docker swarm. The tools get deployed across multiple nodes based on the labels associated with the nodes.  
 
 1. Clone this repository on the manager node in the given docker swarm and then in the terminal window:
-    - Run (using default values):
+    - [Optional] Setup environment variables if you want to override the default values else skip this step.
+        ```
+        export PROXY_IP=<IP_OF_PUBLIC_HOST>
+        export INITIAL_ADMIN_USER=<INITIAL_ADMIN_USER>
+        export INITIAL_ADMIN_PASSWORD_PLAIN=<INITIAL_ADMIN_PASSWORD_PLAIN>
+        ```
+    - Run:
 
         ```./adop stack deploy ```
 
