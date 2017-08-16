@@ -45,6 +45,9 @@ prep_env() {
     if [ -z "${STACK_NAME}" ]; then
       export STACK_NAME="adop"
     fi
+    if [ -z "${INITIAL_ADMIN_USER}" ]; then
+      export INITIAL_ADMIN_USER="demouser"
+    fi
     source ${CONF_DIR}/credentials.generate.sh
     source ${CONF_DIR}/env.config.sh
     if [ -f "${CONF_DIR}/env.override.sh" ]; then

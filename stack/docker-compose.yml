@@ -4,6 +4,7 @@
 version: '3'
 services:
   elasticsearch:
+    container_name: elasticsearch
     image: elasticsearch:2.1.1
     command: elasticsearch -Des.network.host=0.0.0.0
     ports:
@@ -24,6 +25,7 @@ services:
           - "node.labels.elasticsearch==true"
 
   logstash:
+    container_name: logstash
     image: accenture/adop-logstash:0.1.0
     environment:
       - "constraint:tier==public"
@@ -46,6 +48,7 @@ services:
           - "node.labels.logstash==true"
 
   kibana:
+    container_name: kibana
     image: kibana:4.3.1
     command: kibana
     depends_on:
