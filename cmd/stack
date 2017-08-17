@@ -33,11 +33,12 @@ pretty_sleep() {
 
 prep_env() {
     if [ -z "${PROXY_IP}" ]; then
-      export TARGET_HOST=localhost
-      export LOGSTASH_HOST=localhost
+      export TARGET_HOST=$(curl -s bot.whatismyipaddress.com)
     else
       export TARGET_HOST=${PROXY_IP}
-      export LOGSTASH_HOST=${PROXY_IP}
+    fi
+    if [ -z "${LOGSTASH_HOST}" ]; then
+      export LOGSTASH_HOST=$(curl -s bot.whatismyipaddress.com)
     fi
     if [ -z "${COMPOSE_FILE}" ]; then
       export COMPOSE_FILE="${CONF_DIR}/stack/docker-compose.yml"
